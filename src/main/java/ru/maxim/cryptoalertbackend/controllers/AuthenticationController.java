@@ -22,7 +22,7 @@ import static ru.maxim.cryptoalertbackend.utills.CookieUtils.setRefreshTokenToCo
 
 @RestController
 @RequestMapping("/api/v1/auth")
-@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
+@CrossOrigin(origins = {"https://crypto-alerts-app.vercel.app", "http://localhost:3000"}, allowCredentials = "true")
 @RequiredArgsConstructor
 public class AuthenticationController {
 

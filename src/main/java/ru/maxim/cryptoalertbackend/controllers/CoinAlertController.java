@@ -16,7 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/coins")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
+@CrossOrigin(origins = {"https://crypto-alerts-app.vercel.app", "http://localhost:3000"}, allowCredentials = "true")
 public class CoinAlertController {
 
     private final CoinAlertService coinAlertService;

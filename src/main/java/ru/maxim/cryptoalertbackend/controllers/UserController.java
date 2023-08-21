@@ -15,7 +15,7 @@ import ru.maxim.cryptoalertbackend.services.UserService;
 @RestController
 @RequestMapping("/api/v1/users")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
+@CrossOrigin(origins = {"https://crypto-alerts-app.vercel.app", "http://localhost:3000"}, allowCredentials = "true")
 public class UserController {
 
     private final UserService userService;
