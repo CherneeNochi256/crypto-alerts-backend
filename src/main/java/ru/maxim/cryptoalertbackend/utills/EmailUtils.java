@@ -17,7 +17,7 @@ public class EmailUtils {
                 getVerificationUrl(host, token));
     }
 
-    public static String getCoinAlertEmailMessage(String name, CoinAlert coinAlert) {
+    public static String getCoinAlertEmailMessage(String host, String name, CoinAlert coinAlert) {
         return String.format("""
                         Hello %s,
 
@@ -29,10 +29,10 @@ public class EmailUtils {
                 name,
                 coinAlert.getCoinId().toUpperCase(),
                 coinAlert.getDesiredPrice(),
-                getTriggeredCoinUrl(coinAlert.getCoinId()));
+                getTriggeredCoinUrl(host, coinAlert.getCoinId()));
     }
 
-    private static String getTriggeredCoinUrl(String coinId) {
+    private static String getTriggeredCoinUrl(String host, String coinId) {
         return host + "/" + coinId;
     }
 
