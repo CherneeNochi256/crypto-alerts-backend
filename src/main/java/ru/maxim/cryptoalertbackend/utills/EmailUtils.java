@@ -33,7 +33,7 @@ public class EmailUtils {
     }
 
     private static String getTriggeredCoinUrl(String coinId) {
-        return "http://localhost:3000/"+ coinId;
+        return host + "/" + coinId;
     }
 
     public static String getVerificationUrl(String host, String token) {
