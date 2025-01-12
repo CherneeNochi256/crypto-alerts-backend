@@ -60,7 +60,7 @@ public class EmailService {
             message.setSubject(EMAIL_VERIFICATION);
             message.setFrom(fromEmail);
             message.setTo(to);
-            message.setText(getCoinAlertEmailMessage(name, coinAlert));
+            message.setText(getCoinAlertEmailMessage(host, name, coinAlert));
             emailSender.send(message);
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
